@@ -1,5 +1,4 @@
-## Project name:
-Travel Agency
+# Travel Agency
 
 ## Project Description:
 Travel Agency is a software that provides travel planning tools for travel agencies and ordinary tourists. Thanks to this software, users can quickly and conveniently find information about available routes, book airplane, bus, train tickets, and find recommendations on the best places to visit.
