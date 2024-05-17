@@ -1,33 +1,33 @@
-## Project name:
-Travel Agency
+# Maze Solver
+
+---
 
 ## Project Description:
-Travel Agency is a software that provides travel planning tools for travel agencies and ordinary tourists. Thanks to this software, users can quickly and conveniently find information about available routes, book airplane, bus, train tickets, and find recommendations on the best places to visit.
+Final group project assignment for "Algorithms and Methods of Programming" course.
 
-## Potential users:
-- Travel agencies that need a tool to manage their travels and keep track of the most up-to-date itineraries.
-- Regular travelers looking for a simple and convenient way to plan their trips.
+## Assignment Description
 
-## Main features:
-1. Search and view available routes.
-2. Booking tickets for airplanes.
-3. Display recommendations for places of interest and travel.
-4. The ability to view the history of reservations.
+- You are placed in a maze with a starting point S.
 
-## Leaders among program analogues:
-1. Expedia
-2. Airbnb
-3. Tripadvisor
+- You need to find your way to goal G AS QUICKLY(as few cells as possible) AS POSSIBLE and collect some coins on the way.
 
-## Technology stack:
-- ASP .NET Core MVC
-- Entity Framework
-- Sql Server
-- CSS
+- Walls are X, and each cell in a passage has some coins 0 to 9.
 
-## Approximate steps for development:
-1. Development of the user interface.
-2. Implementation of the backend using C#/ASP.NET Core for query processing and database management.
-3. Integration of frontend and backend to create a full-fledged web application.
-4. Testing and improving the functionality.
-5. Software release and support.
+- Moves are 1 unit each.
+
+- You are ALLOWED TO MOVE DIAGONALLY 
+
+- The outside maze is lava.
+
+## Example
+```
+G503746 
+0XXXXX4 
+3XS6138 
+3XXXXXX 
+1X19736 
+5XXXXX8 
+3375042
+```
+
+Solution is  6+1+3+(we skip 8 since we move diagonally)+4+(we skip 6 since we move diagonally)+4+7+3+0+5== 33
