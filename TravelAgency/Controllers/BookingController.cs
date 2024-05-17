@@ -9,13 +9,24 @@ using TravelAgency.Utils.Enumerations;
 
 namespace TravelAgency.Controllers
 {
-    public class BookingController(UserManager<AccountModel> userManager, ApplicationDbContext context)
-        : BaseController(userManager, context)
+    public class BookingController : BaseController
     {
         public delegate Task ConfirmationEventHandler(string userEmail, string message);
 
         public event ConfirmationEventHandler? BookingConfirmed;
 
+        public BookingController(UserManager<AccountModel> userManager, ApplicationDbContext context)
+            : base(userManager, context)
+        {
+            BookingConfirmed += HandleBookingConfirmation;
+        }
+        
+        private Task HandleBookingConfirmation(string userEmail, string message)
+        {
+            Console.WriteLine($"Booking confirmation received for user {userEmail}. Message: {message}");
+            return Task.CompletedTask;
+        }
+        
         [HttpPost]
         public async Task<IActionResult> ConfirmBooking(string? flightJson)
         {
